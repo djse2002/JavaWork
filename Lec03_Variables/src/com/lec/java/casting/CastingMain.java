@@ -44,19 +44,3 @@ public class CastingMain {
 	}
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
