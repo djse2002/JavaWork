@@ -21,23 +21,22 @@ window.event 객세 사용
 
 -->
 <body>
-  <ul>
-    <li onclick="show(this)">Coffee</li>
-    <li onclick="show(this)">Tea
-      <ul>
-        <li onclick="show(this)">Black tea</li>
-        <li onclick="show(this)">Green tea</li>
-      </ul>
-    </li>
-    <li>Milk</li>
-  </ul>
+<ul>
+  <li onclick="show(this)">Coffee</li>
+  <li onclick="show(this)">Tea
+    <ul>
+      <li onclick="event.stopPropagation(); show(this)">Black tea</li>
+      <li onclick="show(this)">Green tea</li>
+    </ul>
+  </li>
+  <li>Milk</li>
+</ul>
 
 <script>
 function show(e){
-  // text만 보이기
+  // text만 보이기 
   alert(e.childNodes[0].nodeValue);
 }
-
 </script>
 
 <br>
@@ -54,13 +53,12 @@ function show(e){
 
 <script>
 // 위 <li> 클릭하면 show(this) 가 작동되도록 이벤트 추가하기
-  var li = document.querySelectorAll("ul#ad li");
+var li = document.querySelectorAll("ul#ad li");
 
-  for(i = 0; i < li.length; i++){
-   // li[i].addEventListener("click", function(){show(this)}); // bubbling 방식
-    li[i].addEventListener("click", function(){show(this)},true); // capturing 방식
+for(i = 0; i < li.length; i++){
+    //li[i].addEventListener("click", function(){show(this);});  // bubbling 방식
+    li[i].addEventListener("click", function(){show(this);}, true); // capturing 방식
 }
-
 
 </script>
 

@@ -88,10 +88,10 @@ function parseXML(xmlDOM) {
 	var row = xmlDOM.getElementsByTagName("row");
 	for(i = 0; i < row.length; i++){
 		table += "<tr>";
-			table += "<td>" + row[i].getElementsByTagName("LINE_NUM")[0].childNodes[0].nodeValue + "</td>";
-			table += "<td>" + row[i].getElementsByTagName("SUB_STA_NM")[0].childNodes[0].nodeValue + "</td>";
-			table += "<td>" + row[i].getElementsByTagName("RIDE_PASGR_NUM")[0].childNodes[0].nodeValue + "</td>";
-			table += "<td>" + row[i].getElementsByTagName("ALIGHT_PASGR_NUM")[0].childNodes[0].nodeValue + "</td>";
+		table += "<td>" + row[i].getElementsByTagName("LINE_NUM")[0].childNodes[0].nodeValue + "</td>";
+		table += "<td>" + row[i].getElementsByTagName("SUB_STA_NM")[0].childNodes[0].nodeValue + "</td>";
+		table += "<td>" + row[i].getElementsByTagName("RIDE_PASGR_NUM")[0].childNodes[0].nodeValue + "</td>";
+		table += "<td>" + row[i].getElementsByTagName("ALIGHT_PASGR_NUM")[0].childNodes[0].nodeValue + "</td>";
 		table += "</tr>";
 	}
 
@@ -99,16 +99,16 @@ function parseXML(xmlDOM) {
 }
 
 function parseJSON(jsonObj){
+	var row = jsonObj.CardSubwayStatsNew.row;
 
-	var row = jsonObj.CardSubwayStatsNew.row
 	var table="<tr><th>호선</th><th>역명</th><th>승차인원</th><th>하차인원</th></tr>";
 
 	for(i = 0; i < row.length; i++){
 		table += "<tr>";
-			table += "<td>" + row[i].LINE_NUM + "</td>";
-			table += "<td>" + row[i].SUB_STA_NM + "</td>";
-			table += "<td>" + row[i].RIDE_PASGR_NUM + "</td>";
-			table += "<td>" + row[i].ALIGHT_PASGR_NUM + "</td>";
+		table += "<td>" + row[i].LINE_NUM + "</td>";
+		table += "<td>" + row[i].SUB_STA_NM + "</td>";
+		table += "<td>" + row[i].RIDE_PASGR_NUM + "</td>";
+		table += "<td>" + row[i].ALIGHT_PASGR_NUM + "</td>";
 		table += "</tr>";
 	}
 

@@ -66,22 +66,24 @@ function mouseOverHandler(event){
 
 addButton.addEventListener("click", function(){
 	demoBox.addEventListener("click", clickHandler); // 이벤트 등록
-	demoBox.innerHTML = "이벤트 추가";
+	demoBox.innerHTML = "클릭해보세요";
 
 	// onXXXX() attribute 사용하여 이벤트 등록
 	demoBox.onmouseover = mouseOverHandler;
 	demoBox.onmouseout = function(event){
-		demoBox.style.outline ="";
+		demoBox.style.outline = ""; 
 	};
+
 });
 
 removeButton.addEventListener('click', function(){
 	demoBox.removeEventListener('click', clickHandler);  // 이벤트 해제
-	demoBox.innerHTML = "이벤트 삭제";
+	demoBox.innerHTML = "이벤트 없어요";
 
-	// onXXXX() attribute 사용하여 이벤트 해제
-	demoBox.onmouseover = undefined; // 이벤트 삭제
-	demoBox.onmouseout = undefined;
+	// onXXXX() attribute 사용하여 이벤트 등록 해제
+	demoBox.onmouseover = undefined;   // 이벤트 삭제
+	demoBox.onmouseout = undefined; 
+
 });
 
 
@@ -93,10 +95,12 @@ removeButton.addEventListener('click', function(){
 
 <script>
 
-/*window.addEventListener("resize", function(){
+/*
+window.addEventListener("resize", function(){
 	document.getElementById('windowSize').innerHTML =
-		window.innerWidth + " x" + window.innerHeight;
-});*/
+		window.innerWidth + " x " + window.innerHeight;
+});
+*/
 
 window.onresize = function(){
 	document.getElementById('windowSize').innerHTML =
@@ -108,6 +112,7 @@ window.onload = function(){
 	document.getElementById('windowSize').innerHTML =
 		window.innerWidth + " x " + window.innerHeight;
 };
+
 
 </script>
 
