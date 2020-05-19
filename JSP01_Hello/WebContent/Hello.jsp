@@ -7,7 +7,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>JSP 시작</title>
 </head>
-
 <body>
 첫 JSP 파일입니다!<br>
 <a href="page1.jsp">page1</a><br>
