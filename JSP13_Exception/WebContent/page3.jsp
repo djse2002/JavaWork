@@ -9,9 +9,9 @@
 </head>
 <body>
 	<script>
-		location.href ='300error.jsp';
+		location.href='300error.jsp';
 	</script>
-
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
 

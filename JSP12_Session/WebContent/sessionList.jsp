@@ -50,27 +50,31 @@
 <%
 	String sessionId = session.getId();
 	int sessionInterval = session.getMaxInactiveInterval();
-	
+
 	out.println("세션 ID: " + sessionId + "<br>");
 	out.println("세션 유효시간: " + sessionInterval + "<br>");
-	
 %>
+
 <%
-	out.println("---session.inwalidate() 후 ---<br>");
+	out.println("--- session.invalidate() 후 ---<br>");
 	// 세션 무효화 invalidate
-	// 기존세션테이블 삭제(session id 무효화)
-	//  - 그 안의 모든 attribute(이름)도 삭제됨.
-	// 새로운 세션테이블 생성 
+	// 기존 세션테이블 삭제 (session id 무효화)
+	//   - 그 안의 모든 attribute(이름)도 삭제됨.
+	// 새로운 세션테이블 생성
 	
-	//session.invalidate();
+	//session.invalidate(); 
 	
 	sessionId = session.getId();
 	sessionInterval = session.getMaxInactiveInterval();
 	out.println("세션 ID: " + sessionId + "<br>");
 	out.println("세션 유효시간: " + sessionInterval + "<br>");
+
+	
 	
 %>
 
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
 

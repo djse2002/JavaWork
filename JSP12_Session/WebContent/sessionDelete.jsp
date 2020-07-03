@@ -7,11 +7,11 @@
 	session.removeAttribute(sessionName);
 	session.removeAttribute("datetime");
 %>
-
 <script>
-	alert("<%= sessionName %> , <%= "datetime" %> 세션삭제")
-	location.href = "sessionList.jsp";
+alert("<%= sessionName %>, <%= "datetime" %> 세션삭제");
+location.href = "sessionList.jsp";
 </script>
+
 
 
 

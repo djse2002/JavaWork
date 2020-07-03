@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%!
-	public static final String ADMIN_ID= "admin";
-	public static final String ADMIN_PW= "1234";
+	public static final String ADMIN_ID = "admin";
+	public static final String ADMIN_PW = "1234";
 %>
 <%
 	String userid = request.getParameter("userid");
@@ -19,7 +19,7 @@
 		
 		Cookie cookie = new Cookie(cookieName, cookieValue);
 		cookie.setMaxAge(2 * 30);
-		response.addCookie(cookie);
+		response.addCookie(cookie);		
 		
 	} else {
 		out.println("<script>");
@@ -28,13 +28,15 @@
 		
 		Cookie cookie = new Cookie(cookieName, cookieValue);
 		cookie.setMaxAge(0);  // 기존에 있었더라도 삭제한다.
-		response.addCookie(cookie);
+		response.addCookie(cookie);	
+		
 	} // end if
 %>
 
 <script>
-	location.href = "login.jsp";
+location.href = "login.jsp";
 </script>
+
 
 
 

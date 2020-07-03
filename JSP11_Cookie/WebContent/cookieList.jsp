@@ -9,22 +9,19 @@
 </head>
 <body>
 <%
-	// 사용자 컴퓨터 안의 쿠키 정보는 request 시에 서버로 전달 된다.
+	// 사용자 컴퓨터 안의 쿠키 정보는 request 시에 서버로 전달된다.
 	// request.getCookies() 로 쿠키 받아온다.
-	Cookie[] cookies =  request.getCookies(); // Cookie[] 배열 리턴
+	Cookie[] cookies = request.getCookies(); // Cookie[] 배열 리턴
 	
 	if(cookies != null){ // 만약 쿠키가 하나도 없다면 null 리턴.
 		for(int i = 0; i < cookies.length; i++){
-			String cookieName  = cookies[i].getName(); // 쿠키 '이름'
-			String cookieValue = cookies[i].getValue(); // 쿠키 '값'
+			String cookieName = cookies[i].getName();  // 쿠키 '이름'
+			String cookieValue = cookies[i].getValue();  // 쿠키 '값'
 			out.println((i + 1) + "] " + cookieName + " : " + cookieValue + "<br>");
-
 		}
-	}else{
-		out.println("쿠키가 없습니다 <br>");
-	} // end if
-
-
+	} else {
+		out.println("쿠키가 없습니다<br>");
+	}	
 %>
 
 <hr>
@@ -36,6 +33,10 @@
 	<input type="submit" value="쿠키삭제">
 </form>
 
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
 

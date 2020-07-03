@@ -1,18 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page isErrorPage="true" %>
-<% response.setStatus(200); %>
+<% response.setStatus(HttpServletResponse.SC_OK); %>    
 <!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>에러 안내</title>
+<title>500 에러 페이지</title>
 </head>
 <body>
-에러가 발생했습니다... <br>
-예외 타입은 : <%= exception.getClass().getName() %><br>
-예외 메세지는 : <%= exception.getMessage() %>
+서비스 사용에 불편을 끼쳐드려 대단히 죄송합니다.
+빠른시간내에 문제 해결하겠습니다.
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>

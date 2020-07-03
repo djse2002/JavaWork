@@ -8,7 +8,7 @@
 </head>
 <body>
 
-   
+    <%--현재 로그인 상태인지, 즉 로그인 세션 (name이 'userid'인 세션값)이 있는지 확인 --%>
 	<% if(session.getAttribute("userid") != null){ %>					
 		<h2>로그인 상태입니다 </h2>
 		<form action="logout.jsp">
