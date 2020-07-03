@@ -23,8 +23,14 @@ public class Person {
 		return name;
 	}
 	public void setName(String name) {
+		System.out.println("setName() 호출");
 		this.name = name;
 	}
+	public void setname(String name) {
+		System.out.println("setname() 호출");
+		this.name = name;
+	}
+	
 	public int getAge() {
 		return age;
 	}
